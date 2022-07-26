@@ -1,0 +1,17 @@
+.gifGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: masonry; /* Experimental feature on firefox dev */
+    gap: 0.8rem;
+    place-items: center;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+.gif {
+    -webkit-column-break-inside: avoid;
+    display: inline-block;
+}
+.gif, .gif img {
+    object-fit: contain;
+    width: 100%;
+}
